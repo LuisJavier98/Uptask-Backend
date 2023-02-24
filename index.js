@@ -12,19 +12,19 @@ conectarBD()
 
 app.use(express.json())
 
-const whiteList = [process.env.FRONT_END]
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (whiteList.includes(origin)) {
-      callback(null, true)
-    }
-    else {
-      callback(new Error('Error de cors'))
+// const whiteList = [process.env.FRONT_END]
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     if (whiteList.includes(origin)) {
+//       callback(null, true)
+//     }
+//     else {
+//       callback(new Error('Error de cors'))
 
-    }
-  }
-}
-app.use(cors(corsOptions))
+//     }
+//   }
+// }
+// app.use(cors(corsOptions))
 
 
 app.use('/api/usuarios', usuarioRouter)
