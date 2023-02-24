@@ -12,7 +12,7 @@ conectarBD()
 
 app.use(express.json())
 
-const whiteList = [process.env.FRONT_END]
+const whiteList = [process.env.FRONT_END, ' https://uptask-backend-production.up.railway.app/']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whiteList.includes(origin)) {
